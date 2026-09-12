@@ -20,4 +20,7 @@ app.get('/api/exercise2', (req, res) => {
   res.status(200).type('text/html').send(html);
 });
 
-app.listen(80);
+const PORT = process.env.PORT || 80;
+app.listen(PORT, () => {
+  console.log(`Exercise 2 running on port ${PORT}`);
+});

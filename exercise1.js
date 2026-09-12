@@ -6,4 +6,7 @@ app.get('/api/exercise1', (req, res) => {
   res.status(200).type('text/html').sendFile(path.join(__dirname, 'lib', 'index.html'));
 });
 
-app.listen(80);
+const PORT = process.env.PORT || 80;
+app.listen(PORT, () => {
+  console.log(`Exercise 1 running on port ${PORT}`);
+});

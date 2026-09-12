@@ -4,4 +4,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(80);
+const PORT = process.env.PORT || 80;
+app.listen(PORT, () => {
+  console.log(`Exercise 4 running on port ${PORT}`);
+});
